@@ -1,0 +1,11 @@
+@use '../../assets/styles' as theme;
+
+.header {
+    background-color: theme.$color-primary;
+    color: theme.$color-neutral-lightest;
+    max-height: 4rem;
+    min-height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

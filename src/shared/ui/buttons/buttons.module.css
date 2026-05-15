@@ -1,0 +1,68 @@
+.button {
+    /* Määritellään CSS-muuttujat */
+    --primary: var(--color-primary, #2563eb);
+    --secondary: var(--color-secondary, #475569);
+    --warning: var(--color-warning, #dc2626);
+    --neutral-darkest: var(--color-neitral-darkest, #111827);
+    --neutral: var(--color-neutral, #9ca3af);
+    --neutral-light: var(--color-neutral-light, #d1d5db);
+    --neutral-lightest: var(--color-neutral-lightest, #ffffff);
+
+    /* Napin näärittelyt */
+    background-color: var(--neutral-light);
+    color: var(--neutral-darkest);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    padding: 1em 2em;
+    margin: 0.5em;
+    border-radius: 0.2em;
+    opacity: 0.8;
+    transition: opacity 100ms linear;
+}
+
+
+.button:focus, .button:hover {
+    opacity: 1;
+    box-shadow: 1px 2px 4px rgb(from var(--neutral-darkest) r g b / 0.1);
+}
+
+.button:disabled {
+    background-color: var(--neutral-light);
+    color: var(--neutral);
+    box-shadow: none;
+    opacity: 1;
+}
+
+.button_primary {
+    background-color: var(--primary);
+    color: var(--neutral-lightest);
+}
+
+.button_secondary {
+    background-color: var(--secondary);
+    color: var(--neutral-lightest);
+}
+
+.button_warning {
+    background-color: var(--warning);
+    color: var(--neutral-lightest);
+}
+
+.button_floating {
+    position: fixed;
+    bottom: 3.5rem;
+    right: 1rem;
+    border-radius: 50%;
+    font-size: 2.5em;
+    width: 1.5em;
+    height: 1.5em;
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button_container > div {
+    transform: translateZ(0);
+}
