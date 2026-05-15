@@ -36,3 +36,7 @@
 .item:hover .item_edit {
     display: flex;
 }
+
+.item_edit a {
+  color: theme.$color-neutral-dark;
+}

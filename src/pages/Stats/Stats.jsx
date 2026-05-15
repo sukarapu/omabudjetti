@@ -64,32 +64,37 @@ function Stats(props) {
 
     return (
         <div className={styles.stats}>
-            <h2>Tilastot</h2>
-            <ResponsiveContainer width="100%" height={300}>
-                <LineChart data={linedata}>
-                    <XAxis dataKey="date"
-                           tickFormatter={(value) => new Date(value).toLocaleDateString(locale)} />
-                    <YAxis />
-                    <Tooltip labelFormatter={(value) => new Date(value).toLocaleDateString(locale)}
-                             formatter={(value) => numberFormat.format(value)} />
-                    <Line type="monotone" dataKey="amount" dot={false} />
-                </LineChart>
-            </ResponsiveContainer>
-            <h3>Kulut kulutyypeittäin</h3>
-            <ResponsiveContainer height={400}>
-                <PieChart>
-                    <Pie data={pieWithColors} dataKey='amount' nameKey='type'>
-                        <LabelList dataKey='amount'
-                                   position='inside'
-                                   fill='white'
-                                   formatter={
-                                     value => numberFormat.format(value)
-                                   } />
-                    </Pie>
-                    <Legend />
-                    <Tooltip formatter={ value => numberFormat.format(value) } />
-                </PieChart>
-            </ResponsiveContainer>
+          <h2>Tilastot</h2>
+
+          { props.data.length ? <>
+
+          <h3>Kulut aikajanalla</h3>
+          <ResponsiveContainer height={350}>
+              <LineChart data={linedata}>
+                  <XAxis dataKey="date"
+                         tickFormatter={(value) => new Date(value).toLocaleDateString(locale)} />
+                  <YAxis />
+                  <Tooltip labelFormatter={(value) => new Date(value).toLocaleDateString(locale)}
+                           formatter={(value) => numberFormat.format(value)} />
+                  <Line type="monotone" dataKey="amount" dot={false} />
+              </LineChart>
+          </ResponsiveContainer>
+          <h3>Kulut kulutyypeittäin</h3>
+          <ResponsiveContainer height={400}>
+              <PieChart>
+                  <Pie data={pieWithColors} dataKey='amount' nameKey='type'>
+                      <LabelList dataKey='amount'
+                                 position='inside'
+                                 fill='white'
+                                 formatter={
+                                   value => numberFormat.format(value)
+                                 } />
+                  </Pie>
+                  <Legend />
+                  <Tooltip formatter={ value => numberFormat.format(value) } />
+              </PieChart>
+          </ResponsiveContainer>
+          </> : <div className={styles.stats_empty}>Tilastotietoja ei ole saatavilla. Syötä kulutietoja.</div> }
         </div>
     )
 }
