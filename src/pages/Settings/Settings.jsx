@@ -2,6 +2,24 @@ import styles from './Settings.module.scss'
 import Button from '../../shared/ui/buttons'
 import { signOut } from 'firebase/auth'
 
+/**
+ * Sovelluksen asetussivu kulutyyppien hallintaan.
+ *
+ * Komponentti:
+ * - näyttää listan olemassa olevista kulutyypeistä
+ * - tarjoaa lomakkeen uuden kulutyypin lisäämiseen
+ *
+ * @param {Object} props
+ * @param {string[]} props.typelist - Lista olemassa olevista kulutyypeistä
+ * @param {Function} props.onTypeSubmit - Funktio, jota kutsutaan kun uusi kulutyyppi lisätään
+ * @returns {JSX.Element} Näkymä, joka sisältää kulutyyppien listan ja lisäyslomakkeen
+ *
+ * @example
+ * <Settings
+ *   typelist={['Ruoka', 'Asuminen', 'Liikenne']}
+ *   onTypeSubmit={handleTypeSubmit}
+ * />
+ */
 function Settings(props) {
 
   // Kirjaa käyttäjän ulos Firebase Authenticationista.

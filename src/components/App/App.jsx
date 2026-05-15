@@ -13,6 +13,27 @@ import { useEffect, useState } from 'react'
 import { onAuthStateChanged } from 'firebase/auth'
 import Startup from '../../pages/Startup'
 
+/**
+ * Sovelluksen juurikomponentti.
+ *
+ * Komponentti hallitsee budjettisovelluksen keskeistä tilaa ja
+ * välittää datan sekä käsittelijäfunktiot `AppRouter`-komponentille.
+ *
+ * Tallennettavat tiedot:
+ * - `data`: sovelluksen budjettimerkinnät
+ * - `typelist`: sovelluksen kulutyypit
+ *
+ * Komponentin vastuulla on:
+ * - hakea ja tallentaa merkintädata
+ * - hakea ja tallentaa kulutyypit
+ * - lisätä uusia merkintöjä tai päivittää olemassa olevia
+ * - poistaa merkintöjä id:n perusteella
+ * - lisätä uusia kulutyyppejä ja järjestää ne aakkosjärjestykseen
+ * - järjestää merkinnät maksupäivän mukaan siten, että uusin näkyy ensin
+ *
+ * @returns {JSX.Element} Sovelluksen reitityksestä vastaava `AppRouter`-komponentti,
+ * jolle välitetään data, kulutyypit sekä käsittelijäfunktiot propsien kautta.
+ */
 function App() {
 
   // Sovellukseen kirjautuneen käyttäjän tiedot.

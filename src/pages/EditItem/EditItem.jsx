@@ -2,6 +2,27 @@ import ItemForm from '../../components/ItemForm'
 import styles from './EditItem.module.scss'
 import { useLoaderData } from 'react-router'
 
+/**
+ * Näkymä olemassa olevan budjettimerkinnän muokkaamiseen.
+ *
+ * Komponentti toimii "wrapperina" `ItemForm`-komponentille ja:
+ * - näyttää otsikon muokkaussivulle
+ * - hakee muokattavan merkinnän tiedot loader-funktion avulla
+ * - välittää tiedot ja käsittelijäfunktiot eteenpäin lomakkeelle
+ *
+ * @param {Object} props
+ * @param {Function} props.onItemSubmit - Funktio, jota kutsutaan kun merkintä tallennetaan
+ * @param {Function} props.onItemDelete - Funktio, jota kutsutaan kun merkintä poistetaan
+ * @param {string[]} props.typelist - Lista käytettävissä olevista kulutyypeistä
+ * @returns {JSX.Element} Näkymä, joka sisältää otsikon ja esitäytetyn ItemForm-lomakkeen
+ *
+ * @example
+ * <EditItem
+ *   typelist={['Ruoka', 'Asuminen', 'Liikenne']}
+ *   onItemSubmit={handleItemSubmit}
+ *   onItemDelete={handleItemDelete}
+ * />
+ */
 function EditItem(props) {
 
   // Haetaan loader-funktion palauttama data.
