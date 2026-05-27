@@ -4,6 +4,10 @@ A personal budget tracker app created as a college project.
 
 🌐 **[Live Demo](https://omabudjetti-55db1.web.app)**
 
+## 📸 Screenshot
+
+![App screenshot](screenshot1.png)
+
 ## 🚀 Technologies
 * **React 19** (Functional components & Hooks)
 * **React Router 7** (Navigation)
