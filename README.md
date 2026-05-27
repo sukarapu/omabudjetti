@@ -1,20 +1,15 @@
 # OmaBudjetti
 
-![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-Firestore-FFCA28?logo=firebase&logoColor=black)
-![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green)
-
 A React application for tracking and managing personal expenses.
 
 ## 🔗 Live Demo
-[https://omabudjetti-55db1.web.app](https://omabudjetti-55db1.web.app)
+https://omabudjetti-55db1.web.app
 
 ---
 
 ## Screenshots
 
-![Main view](/screenshot1.png?raw=true)
+screenshot1.png?raw=true
 
 ---
 
@@ -58,7 +53,7 @@ npm install
 npm run dev
 ```
 
-Open in browser: [http://localhost:5173](http://localhost:5173)
+Open in browser: http://localhost:5173
 
 Other commands:
 
