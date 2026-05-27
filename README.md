@@ -5,80 +5,81 @@
 ![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-Harjoitustyönä toteutettu React-sovellus, jolla voi kirjata ja seurata omia menoja.
+A React application for tracking and managing personal expenses.
 
-🌐 **[Avaa sovellus](https://omabudjetti-55db1.web.app)**
-
----
-
-## Kuvaruutukopiot
-
-![Pääsivu](/screenshot1.png?raw=true)
+## 🔗 Live Demo
+[https://omabudjetti-55db1.web.app](https://omabudjetti-55db1.web.app)
 
 ---
 
-## Ominaisuudet
+## Screenshots
 
-- 📋 Menojen lisäys, muokkaus ja poisto
-- 📊 Tilastot viiva- ja ympyräkaavioina
-- ☁️ Tietojen tallennus Firebase Firestoreen
-- 🔐 Google-kirjautuminen Firebase Authenticationilla
-- 📱 PWA-tuki — asennettavissa mobiililaitteelle
+![Main view](/screenshot1.png?raw=true)
 
 ---
 
-## Tekniikat
+## Features
 
-| Kategoria | Tekniikat |
-|-----------|-----------|
+- 📋 Add, edit and delete expense entries
+- 📊 Statistics with line and pie charts
+- ☁️ Data stored in Firebase Firestore
+- 🔐 Google sign-in with Firebase Authentication
+- 📱 PWA support — installable on mobile devices
+
+---
+
+## Technologies
+
+| Category | Technologies |
+|----------|-------------|
 | Frontend | React 19, React Router 7, SCSS |
-| Kaaviot | Recharts |
-| Ikonit | React Icons |
+| Charts | Recharts |
+| Icons | React Icons |
 | Backend | Firebase Firestore, Firebase Authentication |
-| Testaus | Vitest, React Testing Library |
-| Dokumentointi | Storybook |
-| Buildaus | Vite |
+| Testing | Vitest, React Testing Library |
+| Documentation | Storybook |
+| Build tool | Vite |
 
 ---
 
-## Asennus ja käyttö
+## Installation and Usage
 
-Edellytykset: `node` ja `npm` asennettuna.
+Requirements: `node` and `npm` installed.
 
 ```bash
-# 1. Kloonaa repo
+# 1. Clone the repo
 git clone https://github.com/sukarapu/omabudjetti.git
 cd omabudjetti
 
-# 2. Asenna riippuvuudet
+# 2. Install dependencies
 npm install
 
-# 3. Käynnistä kehitysympäristö
+# 3. Start the development server
 npm run dev
 ```
 
-Avaa selaimessa: [http://localhost:5173](http://localhost:5173)
+Open in browser: [http://localhost:5173](http://localhost:5173)
 
-Muut komennot:
+Other commands:
 
 ```bash
-npm run test      # Käynnistä testit
-npm run build     # Pakkaa sovellus julkaisua varten
-npm run storybook # Käynnistä komponenttikokoelma
+npm run test      # Run tests
+npm run build     # Build for production
+npm run storybook # Start component library
 ```
 
 ---
 
-## Projektin tila
+## Status
 
-✅ Valmis — pienet korjauspäivitykset mahdollisia.
+✅ Complete — minor updates may follow.
 
 ---
 
-## Ylläpitäjä
+## Author
 
 [Victoria Turja](https://github.com/sukarapu)
 
-## Lisenssi
+## License
 
 [MIT](LICENSE)
