@@ -2,7 +2,8 @@
 
 A personal budget tracker app created as a college project.
 
-🌐 **[Live Demo](https://omabudjetti-55db1.web.app)**
+## 🔗 Live demo
+https://omabudjetti-55db1.web.app
 
 ## 📸 Screenshot
 
@@ -37,6 +38,3 @@ A personal budget tracker app created as a college project.
    ```bash
    npm run dev
    ```
-
-## 📄 License
-[MIT](LICENSE)
